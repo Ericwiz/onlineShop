@@ -1,0 +1,33 @@
+<div class="flex flex-row gap-6 px-10 bg-slate-100 pb-24">
+    <img src="{{product.thumbnail}}" class="w-2/4 h-2/4 mt-14 border-2 border-gray-300">
+    <div class="pt-14 px-10">
+        <h3 class="pb-5 font-semibold">
+            {{product.category}}
+        </h3>
+
+        <h2 class="text-2xl pb-5 font-bold">
+            {{product.title}}
+        </h2>
+
+        <p class="text-2xl pb-5">
+            {{product.price | currency}}
+        </p>
+
+        <p>
+            {{product.description}}
+        </p>
+
+        
+        <form class="pt-7 pb-12" #cart="ngForm" *ngFor="let item of carItems.products">
+            <input type="number" [ngModel]="item.quantity" class="w-16 bg-gray-300 border border-gray-300 pl-2" value="1" name="quantity">
+            <!-- <input type="number" [ngModel]="carItems.userId" class="w-16 bg-gray-300 border border-gray-300 pl-2" value="1" name="quantity"> -->
+            <button type="button" class="py-2 px-10 bg-blue-700 text-white ml-7 uppercase" (click)="addCart(cart.value)">Add to Cart</button>
+        </form>
+
+
+        <div class="border-t-2 pt-7">
+            category: {{product.category}}
+        </div>
+    </div>
+</div>
+<app-related-products></app-related-products>

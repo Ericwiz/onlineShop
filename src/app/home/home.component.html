@@ -1,0 +1,29 @@
+<div class="max-w-full">
+    <div 
+    class="h-screen bg-cover bg-center relative bg-fixed" 
+    style="background-image: url('../../assets/images/shop-header.jpg');">
+    <div class="mix-blend-multiply bg-indigo-900 h-screen absolute top-0 w-full"></div>
+    </div>
+    <div class="top-52 left-16 flex justify-center flex-col absolute">
+        <h1 class="text-white font-semibold text-2xl">Discover the best products for your lifestyle at our online store.</h1>
+        <button type="button" class="py-3 px-7 rounded-md bg-sky-800 w-36 text-white self-center mt-10 hover:bg-transparent transition-all border-2 border-sky-900 text-lg">shop now</button>
+    </div>
+</div>
+<div class="flex flex-row justify-center gap-4 mt-12 h-screen">
+    <app-products *ngFor="let sampleProduct of products" [sampleProduct]="sampleProduct"></app-products>
+</div>
+
+<div class="bg-slate-100 py-32 px-7">
+    <div class="flex flex-col">
+        <h2 class="text-5xl self-center">
+            Featured Products
+        </h2>
+        <div class="w-32 bg-teal-500 h-0.5 rounded-2xl mt-8  self-center"></div>
+    </div>
+    <div class="mt-12 grid grid-cols-4 gap-4">
+        <app-featured-products *ngFor="let featuredProduct of featuredProducts" [product]="featuredProduct"></app-featured-products>
+    </div>
+</div>
+
+<app-offer-page></app-offer-page>
+<app-features></app-features>

@@ -1,0 +1,14 @@
+<div class="border-2 border-gray-500 h-5/6 w-96" [routerLink]="['/products', sampleProduct.id]">
+    <img src="{{sampleProduct.thumbnail}}" class="h-4/6 w-fit">
+    
+    <div class="bg-gray-900 h-2/6 flex flex-col justify-start">
+        <h3 class="top-80 text-lg font-bold py-2 px-2 text-white">
+            {{sampleProduct.title}}
+        </h3>
+        <h4 class="text-gray-200 text-sm font-bold py-2 px-2">
+            {{sampleProduct.category}}
+        </h4>
+        <button 
+        class="py-3 px-6 bg-teal-500 w-3/5 self-start ml-2 mt-4 hover:bg-transparent transition-all text-white border border-teal-500">Shop Now</button>
+    </div>
+</div>

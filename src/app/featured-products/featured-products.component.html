@@ -1,0 +1,23 @@
+<div class="border-2 border-gray-400 h-96 relative group" [routerLink]="['/products', product.id]">
+    <img src="{{product.thumbnail}}" class="w-full h-4/6">
+    <div class="bg-gray-900 h-2/6 py-3 px-3">
+        <h3 class="text-white py-2 text-sm">
+            {{product.title}}
+        </h3>
+
+        <h5 class="text-xs text-gray-200">
+            {{product.category}}
+        </h5>
+
+        <p class="text-white py-2">
+            {{product.price | currency}}
+        </p>          
+    </div>
+    <button [title]="'add to cart'" class="absolute top-3 right-3 border border-slate-500 py-1 px-1 hidden group-hover:block">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+    </button>
+</div>
+
+  
